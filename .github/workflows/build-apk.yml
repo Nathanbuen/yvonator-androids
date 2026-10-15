@@ -27,7 +27,7 @@ jobs:
         run: npx cap sync android
       - name: Gerar APK debug
         working-directory: android
-        run: ./gradlew assembleDebug
+        run: bash ./gradlew assembleDebug
       - name: Disponibilizar APK
         uses: actions/upload-artifact@v4
         with:
