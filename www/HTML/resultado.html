@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/resultado.css">
+
+    <title>Yvonator</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <img src="../IMG/genio.png" alt="Gênio">
+
+        <div class="info">
+
+            <h1>Resultado</h1>
+
+            <p>Seu personagem é:</p>
+
+            <strong></strong>
+
+            <form>
+
+                <img src="../IMG/loremIpsum.png" alt="personagem">
+                <!-- Essa imagem poderá ser alterada pelo JavaScript futuramente -->
+
+                <label class="fundoResposta um" onclick="window.location.href='./personagem.html'" id="acertou">
+                    Acertou
+                </label>
+
+                <label class="fundoResposta dois" id="errou">
+                    Errou
+                </label>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Janela de erro -->
+    <div class="modal" id="modalErro">
+
+        <div class="modalConteudo">
+
+            <div>
+                <img src="../IMG/genioBravo.png" alt="">
+            </div>
+
+            <div>
+                <h2>Ops!</h2>
+
+                <p>
+                    Eu errei!
+                    <br>
+                    quer tentar novamente?
+                </p>
+
+                <button onclick="window.location.href='./inicio.html'" id="tentarNovamente">
+                    Tentar novamente
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../JS/resultado.js"></script>
+
+</body>
+</html>

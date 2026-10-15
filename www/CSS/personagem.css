@@ -1,0 +1,43 @@
+* { box-sizing: border-box; }
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: url("../IMG/background.png") center / cover fixed no-repeat;
+    font-family: "Irish Grover", cursive;
+    overflow-x: hidden;
+}
+
+.container {
+    width: min(1180px, 100%);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem clamp(1rem, 5vw, 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.5rem, 5vw, 5rem);
+}
+
+.container > img { width: min(27vw, 320px); max-width: 40%; height: auto; object-fit: contain; }
+.info { width: min(650px, 60%); display: flex; flex-direction: column; align-items: center; }
+.info h1 { color: #d4b348; -webkit-text-stroke: 3px #000; paint-order: stroke fill; text-shadow: 3px 3px 0 #a52222, 6px 6px 0 #000; font-size: clamp(2.5rem, 5vw, 4rem); margin: 0 0 1rem; }
+form { width: 100%; margin: 0; padding: clamp(1rem, 3vw, 2rem); background: #b88cc9d9; border-radius: 20px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem; }
+form img { width: min(75%, 360px); max-height: 48vh; object-fit: contain; }
+.fundoResposta { width: min(90%, 430px); padding: 0.8rem 1rem; background: #d4b348; color: #fff; -webkit-text-stroke: 3px #292004ec; paint-order: stroke fill; border-radius: 15px; font-size: clamp(1.2rem, 2.5vw, 1.5rem); text-align: center; cursor: pointer; user-select: none; transition: background 0.3s, transform 0.3s; }
+.fundoResposta:hover { background: #8f7931; transform: scale(1.03); }
+
+.modal { position: fixed; inset: 0; padding: 1rem; background: #000a; display: none; align-items: center; justify-content: center; z-index: 1000; }
+.modalConteudo { width: min(560px, 100%); max-height: 90svh; overflow: auto; padding: clamp(1.25rem, 4vw, 2.5rem); background: #8233a1; border: 6px solid #b69b22; border-radius: 25px; box-shadow: 8px 8px 0 #000; text-align: center; animation: aparecer 0.3s ease; }
+.modalConteudo h2 { color: #d4b348; -webkit-text-stroke: 3px #000; paint-order: stroke fill; text-shadow: 3px 3px 0 #a52222, 5px 5px 0 #000; font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 0.75rem; }
+.modalConteudo p { color: #fff; -webkit-text-stroke: 2px #3b0a49; paint-order: stroke fill; font-size: clamp(1.2rem, 3vw, 1.6rem); margin: 0 0 1.5rem; }
+.modalConteudo button { padding: 0.75rem 1.25rem; border: 0; border-radius: 12px; background: #d4b348; color: #fff; font: inherit; font-size: clamp(1.1rem, 2.5vw, 1.6rem); -webkit-text-stroke: 2px #302805; paint-order: stroke fill; cursor: pointer; }
+.modalConteudo button:hover { background: #8f7931; }
+@keyframes aparecer { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+
+@media (max-width: 700px) {
+    .container { min-height: 100svh; flex-direction: column; padding-top: 1.5rem; padding-bottom: 1.5rem; }
+    .container > img { width: min(46vw, 220px); max-width: 65%; }
+    .info { width: min(100%, 520px); }
+}

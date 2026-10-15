@@ -1,0 +1,19 @@
+{
+  "name": "yvonator-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Yvonator - Akinator de professores da escola",
+  "scripts": {
+    "sync": "cap sync android",
+    "open:android": "cap open android",
+    "build:web": "node -e \"console.log('Arquivos web prontos em www/')\""
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.4",
+    "@capacitor/core": "^7.4.4"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.4",
+    "typescript": "^7.0.2"
+  }
+}

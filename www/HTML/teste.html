@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Texto YVONATOR - Gradiente + Borda</title>
+  
+  <!-- Fonte Irish Grover trazida do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #6a6a6a; /* Fundo cinza exato da imagem */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .texto-svg {
+      width: 100%;
+      max-width: 900px;
+      height: auto;
+      overflow: visible;
+    }
+
+    /* Estilização do texto dentro do SVG */
+    .texto-estilizado {
+      font-family: 'Irish Grover', cursive;
+      font-size: 200px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      
+      /* Preenchimento com o gradiente dourado suave */
+      fill: url(#gradiente-dourado);
+      
+      /* Borda preta por fora sem invadir a letra */
+      stroke: #000000;
+      stroke-width: 3.5px;
+      stroke-linejoin: round;
+      paint-order: stroke fill;
+      
+      /* Sombra projetada para dar profundidade */
+      filter: drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.6));
+    }
+  </style>
+</head>
+<body>
+
+  <svg class="texto-svg" viewBox="0 0 800 150">
+    <defs>
+      <!-- Definindo o gradiente vertical (do amarelo/creme claro ao dourado/laranja) -->
+      <linearGradient id="gradiente-dourado" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="44%" stop-color="#ffeb9c" />
+        <stop offset="50%" stop-color="#ffac00" />
+      </linearGradient>
+    </defs>
+
+    <!-- O texto do seu título -->
+    <text x="50%" y="60%" text-anchor="middle" dominant-baseline="middle" class="texto-estilizado">
+      YVONATOR
+    </text>
+  </svg>
+
+</body>
+</html>

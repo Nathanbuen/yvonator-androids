@@ -1,0 +1,119 @@
+* { box-sizing: border-box; }
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background: url("../IMG/background.png") center / cover fixed no-repeat;
+    font-family: "Irish Grover", cursive;
+    overflow-x: hidden;
+}
+
+.voltar {
+    position: fixed;
+    z-index: 5;
+    top: clamp(1rem, 4vw, 2rem);
+    left: clamp(1rem, 4vw, 3rem);
+    padding: 0.65rem 1rem;
+    width: auto;
+    min-width: 100px;
+    background: #ffbe3b;
+    color: #fff;
+    font: inherit;
+    font-size: clamp(1rem, 2.2vw, 1.35rem);
+    line-height: 1;
+    border: 0;
+    border-radius: 10px;
+    -webkit-text-stroke: 2px #502700;
+    paint-order: stroke fill;
+    transition: background 0.3s;
+}
+
+.voltar:hover { cursor: pointer; background: #b6882d; }
+
+.container {
+    width: min(1180px, 100%);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 5rem clamp(1rem, 5vw, 4rem) 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.5rem, 5vw, 5rem);
+}
+
+.container > img {
+    width: min(27vw, 320px);
+    max-width: 40%;
+    height: auto;
+    object-fit: contain;
+}
+
+.info {
+    width: min(650px, 58%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto-svg { width: 100%; height: auto; overflow: visible; }
+.texto-estilizado {
+    font-family: "Irish Grover", cursive;
+    font-size: 120px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    fill: url(#gradiente-dourado);
+    stroke: #000;
+    stroke-width: 3.5px;
+    stroke-linejoin: round;
+    paint-order: stroke fill;
+    filter: drop-shadow(3px 3px 0 #a52222) drop-shadow(5px 5px 0 #000);
+}
+
+form {
+    width: 100%;
+    margin: clamp(1rem, 3vw, 2rem) 0 0;
+    padding: clamp(1rem, 3vw, 2rem);
+    background: #b88cc9d9;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form p {
+    margin: 0 0 0.25rem;
+    color: #ffbe3b;
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
+    line-height: 1.2;
+    text-align: center;
+    -webkit-text-stroke: 2px #502700;
+    paint-order: stroke fill;
+}
+
+.fundoResposta {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.8rem 1rem;
+    background: #fdfdfd81;
+    border-radius: 15px;
+    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+    line-height: 1.2;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.fundoResposta:hover { background: #8f8080; cursor: pointer; transform: translateX(3px); }
+input[type="radio"] { width: 20px; height: 20px; flex: 0 0 auto; }
+
+@media (max-width: 700px) {
+    .container {
+        min-height: 100svh;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-top: 5.25rem;
+    }
+    .container > img { width: min(48vw, 230px); max-width: 65%; }
+    .info { width: min(100%, 520px); }
+}

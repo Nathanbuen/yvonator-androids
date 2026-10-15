@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/perguntas.css">
+    <title>Yvonator - Perguntas</title>
+</head>
+<body>
+
+    <button onclick="window.location.href='./tematica.html'" class="voltar">voltar</button>
+
+    <div class="container">
+        <img src="../IMG/genio.png">
+
+        <div class="info">
+
+            <svg class="texto-svg" viewBox="-80 -80 800 150">
+                <defs>
+
+                <!-- Definindo o gradiente vertical (do amarelo/creme claro ao dourado/laranja) -->
+                <linearGradient id="gradiente-dourado" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="44%" stop-color="#ffeb9c" />
+                    <stop offset="50%" stop-color="#ffac00" />
+                </linearGradient>
+                </defs>
+
+                <!-- O texto do seu título -->
+                <text  class="texto-estilizado um">
+                YVONATOR
+                </text>
+            </svg>
+
+
+
+            <div class="opcoes">
+                <form>
+                <p>Seu personagem é um professor da área da natureza?</p>
+                
+                <label class="fundoResposta">
+                    <input type="radio" id="sim" name="escolha" value="sim">
+                    Sim
+                </label>
+               
+                <label class="fundoResposta">
+                    <input type="radio" id="nao" name="escolha" value="nao">
+                    Não
+                </label>
+               
+                <label class="fundoResposta">
+                    <input type="radio" id="naoSei" name="escolha" value="naoSei">
+                    Não sei
+                </label>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+ 
+    <script src="../JS/perguntas.js"></script>
+</body>
+</html>

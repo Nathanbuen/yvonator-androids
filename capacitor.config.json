@@ -1,0 +1,6 @@
+{
+  "appId": "com.yvonator.app",
+  "appName": "Yvonator",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
